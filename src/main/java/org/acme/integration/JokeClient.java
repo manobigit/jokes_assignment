@@ -14,15 +14,11 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
  * REST client in a Quarkus application, automatically handling requests to
  * the Joke API.
  */
-@Path("/random_joke")
 @RegisterRestClient(baseUri = "https://official-joke-api.appspot.com/")
 public interface JokeClient {
 
     @GET
+    @Path("/random_joke")
     JokesDto getJokes();
 
-    @POST
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
-    JokesDto postJoke(JokesDto jokePostDto);
 }

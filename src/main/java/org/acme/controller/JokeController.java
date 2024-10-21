@@ -79,14 +79,4 @@ public class JokeController {
         return jokes;
     }
 
-
-    @POST
-    @Path("/save")
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public JokesDto forwardJoke(JokesDto jokePostDto) {
-        // Call the external service to post the joke
-        return jokeClient.postJoke(jokePostDto);
-
-    }
 }

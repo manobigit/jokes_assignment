@@ -66,9 +66,9 @@ public class JokeControllerTest {
                 .get("/jokes")
                 // then
                 .then()
-                .statusCode(400) .body("message", is("Count must be between 1 and 100."))  // Assert the error message in the response
+                .statusCode(400).body("message", is("Count must be between 1 and 100."))  // Assert the error message in the response
                 .body("statusCode", is(400));
-}
+    }
 
     @Test
     void testWhenCountQueryParamIsGreaterThanHundred() throws JsonProcessingException {
@@ -82,7 +82,7 @@ public class JokeControllerTest {
                 .get("/jokes")
                 // then
                 .then()
-                .statusCode(400) .body("message", is("Count must be between 1 and 100."))  // Assert the error message in the response
+                .statusCode(400).body("message", is("Count must be between 1 and 100."))  // Assert the error message in the response
                 .body("statusCode", is(400));
     }
 
