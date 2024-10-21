@@ -14,7 +14,7 @@ public class BadRequestExceptionMapper implements ExceptionMapper<BadRequestExce
 
     @Override
     public Response toResponse(BadRequestException exception) {
-        ErrorResponse errorResponse = new ErrorResponse("Count must be between 1 and 100.", 400);
+        ErrorResponse errorResponse = new ErrorResponse(exception.getMessage(), 400);
         return Response.status(Response.Status.BAD_REQUEST)
                 .entity(errorResponse)
                 .build();
