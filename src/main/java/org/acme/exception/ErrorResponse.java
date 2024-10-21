@@ -2,10 +2,13 @@ package org.acme.exception;
 
 import java.time.LocalDateTime;
 
+/**
+ * This class is used to display the exception as below fields format.
+ */
 public class ErrorResponse {
-    private String message;
-    private int statusCode;
-    private LocalDateTime timestamp;
+    private final String message;
+    private final int statusCode;
+    private final LocalDateTime timestamp;
 
     public ErrorResponse(String message, int statusCode) {
         this.message = message;

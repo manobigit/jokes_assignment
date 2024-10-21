@@ -6,7 +6,9 @@ import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
 import jakarta.ws.rs.core.Response;
 
-
+/**
+ * This class is used to map when the exception occurs and return as Response.
+ */
 @Provider
 public class BadRequestExceptionMapper implements ExceptionMapper<BadRequestException> {
 

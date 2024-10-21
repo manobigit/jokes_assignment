@@ -1,4 +1,4 @@
-package org.acme;
+package org.acme.controllertest;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.json.JsonMapper;
