@@ -16,6 +16,11 @@ public class JokesDto {
         this.id = id;
     }
 
+    public JokesDto(String setup, String punchline) {
+        this.setup = setup;
+        this.punchline = punchline;
+    }
+
     public String getType() {
         return type;
     }
